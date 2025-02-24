@@ -31,27 +31,25 @@ const showWinner = (userWin) => {
 }
 const playGame = (userChoice) => {
     const compChoice = genCompChoice();
-    console.log("computer choice = ",compChoice);
+    console.log("computer choice = ", compChoice);
     let userWin = true;
 
-    if(userChoice == compChoice){
+    if (userChoice === compChoice) {
         msg.innerText = "It's a draw";
         msg.style.backgroundColor = "#824670";
+        return;
     }
-        if(userChoice == "rock"){
-        if(userChoice = "rock"){
-            userWin = compChoice == "paper" ? false : true;
-        }
-        else if(userChoice == "paper"){
-            userWin = compChoice == "scissors" ? false : true;
-        }
-        else{
-            userWin = compChoice == "rock" ? false : true;
-        }
-        showWinner(userWin);
-    }
-}
 
+    if (userChoice === "rock") {
+        userWin = compChoice === "paper" ? false : true;
+    } else if (userChoice === "paper") {
+        userWin = compChoice === "scissors" ? false : true;
+    } else {
+        userWin = compChoice === "rock" ? false : true;
+    }
+
+    showWinner(userWin);
+}
 choices.forEach((choice) => {
     choice.addEventListener("click", () => {
         const userChoice = choice.getAttribute("id");
