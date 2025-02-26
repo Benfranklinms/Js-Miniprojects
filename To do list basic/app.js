@@ -7,8 +7,23 @@ const addTask = () => {
     if(text === ""){
         alert("Please input text");
     }
-    else{
         const li = document.createElement('li');
-        li.textContent(text)
-    }
-}
+        li.textContent(text);
+
+        li.addEventListener('click', () => {
+            li.classList.toggle(checked);
+        });
+
+        const deleteButton = document.createElement('span');
+        deleteButton.textContent('❌');
+
+        deleteButton.addEventListener('click', () => {
+            list.removeChild(li);
+        });
+
+        li.appendChild(deleteButton);
+        list.appendChild(li);
+        input.value = "";
+};
+
+add.addEventListener('click', addTask);
