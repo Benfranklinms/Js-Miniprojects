@@ -6,21 +6,22 @@ const addTask = () => {
     const text = input.value.trim();
     if(text === ""){
         alert("Please input text");
+        return;
     }
-        const li = document.createElement('li');
-        li.textContent(text);
+    const li = document.createElement('li');
+    li.textContent = text;
 
         li.addEventListener('click', () => {
-            li.classList.toggle(checked);
+            li.classList.toggle("checked");
         });
 
         const deleteButton = document.createElement('span');
-        deleteButton.textContent('❌');
-
+        deleteButton.textContent = '❌';
+        deleteButton.style.margin = '35px';
+        deleteButton.style.cursor = 'pointer';
         deleteButton.addEventListener('click', () => {
             list.removeChild(li);
         });
-
         li.appendChild(deleteButton);
         list.appendChild(li);
         input.value = "";
