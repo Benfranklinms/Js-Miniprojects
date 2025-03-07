@@ -3,9 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image slider</title>
+    <title>Image Slider - 3 Visible Slides</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-</body>
-</html>
+    <div class="slider-container">
+        <div class="arrow arrow-left">&#10094;</div>
+        <div class="slider">
+            <div class="slide-wrapper" id="slideWrapper">
+                <div class="slide">
+                    <div class="card">
+                        <div class="card-inner">
+                            <img src="/api/placeholder/800/500" alt="Mountain">
+                            <div class="tag">Mountain</div>
+                            <p class="description">An image slider is a web element that displays multiple images in a rotating format, allowing users to navigate through visuals using arrows or indicators.</p>
+                            <div class="button-container">
+                                <div class="circle-button">&#10095;</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="card">
+                        <div class="card-inner">
+                            <img src="/api/placeholder/800/500" alt="Laptop">
+                            <div class="tag">Laptop</div>
+                            <p class="description">An image slider is a web element that displays multiple images in a rotating format, allowing users to navigate through visuals using arrows or indicators.</p>
+                            <div class="button-container">
+                                <div class="circle-button">&#10095;</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="card">
+                        <div class="card-inner">
+                            <img src="/api/placeholder/800/500" alt="Lake">
+                            <div class="tag">Lake</div>
+                            <p class="description">An image slider is a web element that displays multiple images in a rotating format, allowing users to navigate through visuals using arrows or indicators.</p>
+                            <div class="button-container">
+                                <div class="circle-button">&#10095;</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="arrow arrow-right" onclick="nextSlide()">&#10095;</div>
+        </body>
+        </html>

@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #a8e6cf, #abd1c6, #b9e0e0, #c2e5f2);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.slider-container {
+    max-width: 1200px;
+    width: 100%;
+    position: relative;
+}
+
+.slider {
+    overflow: hidden;
+    position: relative;
+    margin: 0 40px;
+}
+
+.slide-wrapper {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    flex: 0 0 calc(100% / 3);
+    padding: 0 10px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 100%;
+}
+
+.card-inner {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.tag {
+    display: inline-block;
+    background-color: #e6f2ff;
+    color: #0066cc;
+    border-radius: 50px;
+    padding: 4px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 16px;
+}
+
+.description {
+    margin-top: 8px;
+    color: #333;
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.circle-button {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #0066cc;
+    color: #0066cc;
+    cursor: pointer;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0066cc;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 32px;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+}
+
+.arrow-left {
+    left: 0;
+}
+
+.arrow-right {
+    right: 0;
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+    flex-wrap: wrap;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #c2e5f2;
+    margin: 4px;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #0066cc;
+}
+
+@media (max-width: 992px) {
+    .slide {
+        flex: 0 0 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .slide {
+        flex: 0 0 100%;
+    }
+    
+    .arrow {
+        width: 40px;
+        height: 40px;
+        font-size: 24px;
+    }
+}
